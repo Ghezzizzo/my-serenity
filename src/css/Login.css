@@ -9,8 +9,9 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #dcdcdc;
+  background-color: #dcdcdc1f;
   padding: 30px;
+  border-radius: 15px;
 }
 .login__textBox {
   padding: 10px;

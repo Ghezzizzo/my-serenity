@@ -1,3 +1,4 @@
+import { doneList } from "./js/achivements";
 import { initializeApp } from "firebase/app";
 import {
   GoogleAuthProvider,
@@ -40,6 +41,7 @@ const signInWithGoogle = async () => {
         name: user.displayName,
         authProvider: "google",
         email: user.email,
+        achivements: doneList(),
       });
     }
   } catch (err) {
@@ -64,6 +66,7 @@ const registerWithEmailAndPassword = async (name, email, password) => {
       name,
       authProvider: "local",
       email,
+      achivements: doneList(),
     });
   } catch (err) {
     console.error(err);
