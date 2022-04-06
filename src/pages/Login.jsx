@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { auth, logInWithEmailAndPassword, signInWithGoogle } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import styles from "../css/Login.module.css";
+import Navbar from "../components/Navbar";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -47,6 +48,9 @@ function Login() {
         </div>
         <div>
           Don't have an account? <Link to="/register">Register</Link> now.
+        </div>
+        <div>
+          Return to the <Link to="/">Home page</Link>
         </div>
       </div>
     </div>
